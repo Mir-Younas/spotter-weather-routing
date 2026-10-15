@@ -1,3 +1,4 @@
+from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
@@ -10,6 +11,12 @@ def analyze_routes(request):
     serializer = RouteAnalysisSerializer(data=request.data)
     serializer.is_valid(raise_exception=True)
 
-    result = analyze_routes_service(serializer.validated_data)
+    try:
+        result = analyze_routes_service(serializer.validated_data)
+    except ValueError as exc:
+        return Response(
+            {"detail": str(exc)},
+            status=status.HTTP_400_BAD_REQUEST,
+        )
 
     return Response(result)
