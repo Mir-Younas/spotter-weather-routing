@@ -6,6 +6,22 @@ Built with **Django REST Framework, React, TypeScript, OpenRouteService, and Ope
 
 The application helps drivers and dispatchers assess weather-related risks before starting a journey. Instead of comparing routes based only on distance or travel time, it evaluates forecast conditions at estimated checkpoint arrival times.
 
+## Live Demo & Deployment
+
+The application is deployed and accessible online.
+
+- **Live Application:** https://spotter-weather-routing-chi.vercel.app
+- **Backend API:** https://spotter-weather-routing-production-99b4.up.railway.app
+- **GitHub Repository:** https://github.com/Mir-Younas/spotter-weather-routing
+- **Loom Walkthrough:** https://www.loom.com/share/98768071edfb4556b7a98b533d12ce5a
+
+### Hosting
+
+- **Frontend:** Vercel
+- **Backend:** Railway
+
+The frontend communicates with the deployed Django REST API to analyze truck routes and retrieve weather forecasts.
+
 ## Overview
 
 Weather conditions can vary significantly across long-distance trucking routes. High winds, heavy rainfall, snowfall, and other hazardous conditions may affect travel safety.
@@ -461,11 +477,13 @@ npm run build
 
 ## Project Status
 
-**Full-stack MVP implemented.**
+**Full-stack MVP implemented and deployed.**
 
-The application includes a working Django REST API and React dashboard with route planning, alternative-route comparison, interactive mapping, weather-risk assessment, and a 48-hour weather heatmap.
+The React frontend is deployed on Vercel, and the Django REST API is hosted on Railway.
 
-The backend currently passes 22 automated tests, and the frontend passes ESLint, TypeScript compilation, and production-build checks.
+The application includes route planning, alternative-route comparison, interactive mapping, weather-risk assessment, risk-based recommendations, and a 48-hour weather heatmap.
+
+The backend passes 22 automated tests, and the frontend passes ESLint, TypeScript compilation, and production-build checks.
 
 ## Author
 
